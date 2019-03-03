@@ -1,0 +1,90 @@
+*{
+  margin:0;
+  padding:0;
+  font-family: "Arial",serif;
+}
+
+body{
+  background: #dfffa9;
+}
+/*nav*/
+nav{
+  background: #007277;
+  height:50px;
+  wodth:100%;
+  text-align: center;
+}
+nav .nav-bar{
+  display: inline;
+  padding-top: 15px;
+  color:#f4ebeb;
+}
+
+/*main*/
+.main{
+  position relative;
+  width: 80%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:10px;
+
+}
+.pazzle_piece{
+  position:absolute;
+  height: 150px;
+  width:150px;
+  z-index: 1;
+  background-size: contain;
+  background-repeat:no-repeat;
+
+}
+#piece_1{
+  background-image: url('photos/row-1-col-1.png');
+}
+#piece_2{
+  background-image: url('photos/row-1-col-2.png');
+}
+#piece_3{
+  background-image: url('photos/row-1-col-3.png');
+}
+#piece_4{
+  background-image: url('photos/row-1-col-4.png');
+}
+
+#piece_7{
+  background-image: url('photos/row-2-col-1.png');
+}
+#piece_8{
+  background-image: url('photos/row-2-col-2.png');
+}
+#piece_9{
+  background-image: url('photos/row-2-col-3.png');
+}
+#piece_10{
+  background-image: url('photos/row-2-col-4.png');
+}
+
+#piece_13{
+  background-image: url('photos/row-3-col-1.png');
+}
+#piece_14{
+  background-image: url('photos/row-3-col-2.png');
+}
+#piece_15{
+  background-image: url('photos/row-3-col-3.png');
+}
+#piece_16{
+  background-image: url('photos/row-3-col-4.png');
+}
+#piece_5{
+  background-image: url('photos/row-4-col-1.png');
+}
+#piece_6{
+  background-image: url('photos/row-4-col-2.png');
+}
+#piece_11{
+  background-image: url('photos/row-4-col-3.png');
+}
+#piece_12{
+  background-image: url('photos/row-4-col-4.png');
+}

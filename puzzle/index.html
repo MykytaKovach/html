@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+  <title>puzzle</title>
+</head>
+<body>
+  <header>
+    <nav>
+    <i class="fas fa-puzzle-piece nav-bar"></i>
+    <p class="nav-bar">Pazzle</p>
+    </nav>
+  </header>
+  <section class="main">
+    <div class="pazzle_piece" id="piece_1"></div>
+    <div class="pazzle_piece" id="piece_2"></div>
+    <div class="pazzle_piece" id="piece_3"></div>
+    <div class="pazzle_piece" id="piece_4"></div>
+    <div class="pazzle_piece" id="piece_5"></div>
+    <div class="pazzle_piece" id="piece_6"></div>
+    <div class="pazzle_piece" id="piece_7"></div>
+    <div class="pazzle_piece" id="piece_8"></div>
+    <div class="pazzle_piece" id="piece_9"></div>
+    <div class="pazzle_piece" id="piece_10"></div>
+    <div class="pazzle_piece" id="piece_11"></div>
+    <div class="pazzle_piece" id="piece_12"></div>
+    <div class="pazzle_piece" id="piece_13"></div>
+    <div class="pazzle_piece" id="piece_14"></div>
+    <div class="pazzle_piece" id="piece_15"></div>
+    <div class="pazzle_piece" id="piece_16"></div>
+
+  </section>
+  <script>
+    const cells = document.getElementsByClassName('pazzle_piece');
+    function getCell(id){
+      return document.getElementById(`${id}`);
+    };
+    function roundnum(num){
+return Math.round(num / 50)*50;
+}
+    function move(e){
+      getCell(e.target.id).style.zIndex="100"
+      getCell(e.target.id).style.left=`${e.clientX-50}px`;
+      getCell(e.target.id).style.top=`${e.clientY-50}px`;
+
+    }
+    function mouse(e){
+      getCell(e.target.id).addEventListener("mousemove",move);
+      getCell(e.target.id).addEventListener("mouseup",(e)=>{
+        getCell(e.target.id).removeEventListener("mousemove",move);
+        getCell(e.target.id).style.zIndex="1";
+        getCell(e.target.id).style.left=`${roundnum(e.clientX-50)}px`;
+        getCell(e.target.id).style.top=`${roundnum(e.clientY-50)}px`;
+      });
+
+
+    }
+
+
+    for (let cell of Array.from(cells)){
+     cell.addEventListener("mousedown",mouse);
+    };
+  </script>
+</body>
+</html>
